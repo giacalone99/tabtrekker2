@@ -17,7 +17,8 @@ function tabtrekker(data) {
         $("#image_spinner").css("opacity", 1);
         getNextImageSet(nextImageSet);
         $("#location_name").text(ImageSets[nextImageSet].name);
-        saveAllOptions(["images_lastupdated", "images_lastchosen", "images_current", "images_num_images", "images_currentset"], [now, now, 0, 6, nextImageSet]);
+        var setLength = ImageSets[nextImageSet].images.length;
+        saveAllOptions(["images_lastupdated", "images_lastchosen", "images_current", "images_num_images", "images_currentset"], [now, now, 0, setLength, nextImageSet]);
     }
     else {
         loadStoredImages().then(function(result) {
