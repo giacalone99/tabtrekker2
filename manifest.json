@@ -1,0 +1,28 @@
+{
+
+    "manifest_version": 2,
+    "name":"TabTrekker",
+    "version": "0.0.1",
+    "developer": {
+        "name": "Luke Giacalone",
+        "url": "https://lukegiacalone.com"
+    },
+
+    "description": "Explore the world one tab at a time!",
+
+    "icons": {
+        "48": "data/img/icon-48.png",
+        "96": "data/img/icon-96.png"
+    },
+
+    "chrome_url_overrides": {
+        "newtab": "tabtrekker.html"
+    },
+
+    "options_ui": {
+        "page": "settings.html"
+    },
+
+    "permissions": ["storage", "downloads", "<all_urls>"]
+
+}
